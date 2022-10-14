@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>game.index API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>game.index</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import cmd
+import time
+import sys
+sys.path.append(&#39;C:/Users/fizza/Desktop/git code/game&#39;)
+
+from game.player import Player
+from game.intelligence import Intelligence
+from game.player_score import PlayerScore
+from game.visual_repr import VisualRepresentaion
+
+LEVEL_MSG = &#34;&#34;&#34;Please select the game level
+                e - easy
+                m - medium
+                h - hard : &#34;&#34;&#34;
+WELCOME_MSG = f&#34;Click Y|y to start first or N|n to give chance to your opponent : &#34;
+USER_MSG = &#39;&#39;&#39;\nClick q to quit the game |
+click r to restart the game |
+click c to change the name |
+\nClick any key to roll the dice : &#39;&#39;&#39;
+
+
+class PigShell(cmd.Cmd):
+    intro = &#34;Welcome to the Pig-dice game. Type &#39;help&#39; or &#39;?&#39;&#39; to list commands.\n&#34;
+    prompt = &#39;(Pig) &#39;
+    flag = None
+
+    def __init__(self):
+        cmd.Cmd.__init__(self)
+
+        self.repr_obj = VisualRepresentaion()
+
+        self.game = False
+        self.player_name = None
+        self.player_turn = 1
+        self.game_level = &#39;E&#39;
+
+    def default(self, arg):
+        &#39;Default function which is called when does not understand the command&#39;
+        print(&#39;I do not understand that command. Type &#34;help&#34; for a list of commands.&#39;)
+
+    def quitGame(self, score):
+        &#34;&#34;&#34;Quits from the game
+
+        Returns:
+            [boolean]: To quit
+        &#34;&#34;&#34;
+        self.repr_obj.display_score_after_turn(score)
+        self.repr_obj.display_score_after_game_over(score)
+        return True
+
+    def changeName(self, player_score_obj):
+        &#34;&#34;&#34;
+            Changes the existing player name
+        Args:
+            player_score_obj (clsobj): player score object used to change the name
+        &#34;&#34;&#34;
+        changed_player_name = input(&#39;Enter a new name: &#39;)
+        player_score_obj.change_player_name(changed_player_name, self.player_name)
+        self.player_name = changed_player_name
+
+    def check_the_key(self, key, player_score_obj):
+        &#34;&#34;&#34;[summary]
+
+        Args:
+            key ([str]): To act on specific function
+            player_score_obj ([clsobj]): Used to get the score and change the name of player
+
+        Returns:
+            [func]: Returns to specific function
+        &#34;&#34;&#34;
+        if key.lower() == &#39;q&#39; or key.lower() == &#39;r&#39;:
+            score = player_score_obj.get_player_score()
+            self.quitGame(score)
+            return &#39;break&#39;
+        elif key.lower() == &#39;c&#39;:
+            self.changeName(player_score_obj)
+            return key
+        else:
+            return key
+
+    def start_the_game(self, player_score_obj):
+        &#34;&#34;&#34;Calls computer intelligence or gameplay of player depending on the turn
+        returns when
+        - game is over
+        - user quits the game
+
+        Args:
+            player_score_obj ([clsobj]): Object of player score
+
+        Returns:
+            [type]: Return only if game is over
+        &#34;&#34;&#34;
+        int_obj = Intelligence(self.game_level)
+
+        while self.game:
+            if self.player_turn % 2 == 1:
+                print(&#39;\nComputers turn&#39;)
+                result = int_obj.computer_intelligence(player_score_obj)
+                if result == &#39;game_over&#39;:
+                    return {&#39;game_over&#39;: &#39;computer&#39;}
+                self.player_turn = self.player_turn + 1
+            elif self.player_turn % 2 == 0:
+
+                key = input(USER_MSG)
+                key_ = self.check_the_key(key, player_score_obj)
+                if key_ == &#39;break&#39;:
+                    return
+                result = self.player_obj.game_play(key_, self.player_name, player_score_obj)
+                if result == &#39;game_over&#39;:
+                    return {&#39;game_over&#39;: self.player_name}
+                self.player_turn = self.player_turn + 1
+            self.repr_obj.display_score_after_turn(player_score_obj.get_player_score())
+
+    def set_player_turn(self, game_start_key):
+        &#34;&#34;&#34;If game start key is n player turn would be 1 else 0
+
+        Args:
+            game_start_key ([str]): Y|N y - players wants to start first; n - computer starts first
+
+        Returns:
+            [int]: returns player turn 1 or 0
+        &#34;&#34;&#34;
+        if game_start_key in [&#39;n&#39;, &#39;N&#39;]:
+            self.player_turn = 1
+            print(&#39;First turns goes to Computer&#39;)
+        else:
+            self.player_turn = 2
+            print(f&#34;{self.player_name}, you&#39;re starting the game now get ready! Good luck :) &#34;)
+        return self.player_turn
+
+    def get_game_level(self):
+        &#34;&#34;&#34;To get to know which level users wants to play
+        e - easy
+        m - medium
+        h - hard
+
+        Returns:
+            [str]: The level of the game
+        &#34;&#34;&#34;
+        level_flag = False
+        while not level_flag:
+            game_level = input(LEVEL_MSG)
+            if game_level in [&#39;e&#39;, &#39;E&#39;, &#39;m&#39;, &#39;M&#39;, &#39;h&#39;, &#39;H&#39;]:
+                level_flag = True
+        return game_level
+
+    def get_game_start_key(self):
+        &#34;&#34;&#34;To get to know who is starting the game first whether the player or computer
+        player = y
+        computer = n
+
+        Returns:
+            [func]: To set the player turn
+        &#34;&#34;&#34;
+        while not self.game:
+            game_start_key = input(WELCOME_MSG)
+            if game_start_key in [&#39;n&#39;, &#39;N&#39;, &#39;y&#39;, &#39;Y&#39;]:
+                self.game = True
+        return self.set_player_turn(game_start_key)
+
+    def display(self, score, result):
+        &#34;&#34;&#34;Function that displays accordingly once game is over
+
+        Args:
+            score ([dict]): Player score
+            result ([dict]): Container the playername with gameover as key
+
+        Returns:
+            [boolean]: To end the game
+        &#34;&#34;&#34;
+        self.repr_obj.display_score_after_turn(score)
+        self.repr_obj.game_over(result[&#39;game_over&#39;])
+        self.repr_obj.display_score_after_game_over(score)
+        return True
+
+    def do_start(self, args):
+        &#39;To start the game,  Click command start&#39;
+        if args == &#39;cheat&#39;:
+            start_dice = 2
+            end_dice = 5
+        else:
+            start_dice = 1
+            end_dice = 6
+        self.player_obj = Player(start_dice, end_dice)
+        self.repr_obj = VisualRepresentaion()
+
+        self.game = False
+        self.player_name = None
+        self.player_turn = 0
+        self.game_level = None
+
+        self.player_name = self.player_obj.get_player_name()
+        player_score_obj = PlayerScore(self.player_name)
+
+        print(f&#34;Hey! {self.player_name}, Let&#39;s play pig.&#34;)
+        time.sleep(0.2)
+        self.game_level = self.get_game_level()
+        self.player_turn = self.get_game_start_key()
+        result = self.start_the_game(player_score_obj)
+        if type(result) == dict:
+            score = player_score_obj.get_player_score()
+            self.display(score, result)
+
+    def do_rules(self, args):
+        &#39;Rules of the game are here&#39;
+        print(&#39;The Basic Rules of the game are as follows: &#39;)
+        print()
+        print(&#39;A player shall roll a die until the player decides to hold&#39;)
+        print(&#39;Be careful because if you(the player) roll a 1 or a 6&#39;)
+        print(&#39;You will lose your score of that turn- meaning you will get a 0 for that turn&#39;)
+        print(&#39;If you roll any other number besides a 1 or a 6&#39;)
+        print(&#34;It will be added to your &#39;TurnScore&#39; and your turn will continue&#34;)   
+        print()
+        print(&#34;Now, To roll the dice type &#39;start&#39; or &#39;start_cheat_game&#39; to start with cheats &#34;)
+
+    def do_quit(self, args):
+        &#39;Quit the game&#39;
+        return True
+
+    def do_start_cheat_game(self, arg):
+        &#39;To play this game faster,  Type start_cheat_game&#39;
+        print(&#39;Welcome to cheat game&#39;)
+        print()
+        print(&#39;&#39;&#39;Cheat game will end quicker than the usual game because
+you will only get numbers between 2 and 5 &#39;&#39;&#39;)
+        self.do_start(&#39;cheat&#39;)
+
+
+if __name__ == &#39;__main__&#39;:
+    PigShell().cmdloop()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="game.index.PigShell"><code class="flex name class">
+<span>class <span class="ident">PigShell</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>A simple framework for writing line-oriented command interpreters.</p>
+<p>These are often useful for test harnesses, administrative tools, and
+prototypes that will later be wrapped in a more sophisticated interface.</p>
+<p>A Cmd instance or subclass instance is a line-oriented interpreter
+framework.
+There is no good reason to instantiate Cmd itself; rather,
+it's useful as a superclass of an interpreter class you define yourself
+in order to inherit Cmd's methods and encapsulate action methods.</p>
+<p>Instantiate a line-oriented interpreter framework.</p>
+<p>The optional argument 'completekey' is the readline name of a
+completion key; it defaults to the Tab key. If completekey is
+not None and the readline module is available, command completion
+is done automatically. The optional arguments stdin and stdout
+specify alternate input and output file objects; if not specified,
+sys.stdin and sys.stdout are used.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PigShell(cmd.Cmd):
+    intro = &#34;Welcome to the Pig-dice game. Type &#39;help&#39; or &#39;?&#39;&#39; to list commands.\n&#34;
+    prompt = &#39;(Pig) &#39;
+    flag = None
+
+    def __init__(self):
+        cmd.Cmd.__init__(self)
+
+        self.repr_obj = VisualRepresentaion()
+
+        self.game = False
+        self.player_name = None
+        self.player_turn = 1
+        self.game_level = &#39;E&#39;
+
+    def default(self, arg):
+        &#39;Default function which is called when does not understand the command&#39;
+        print(&#39;I do not understand that command. Type &#34;help&#34; for a list of commands.&#39;)
+
+    def quitGame(self, score):
+        &#34;&#34;&#34;Quits from the game
+
+        Returns:
+            [boolean]: To quit
+        &#34;&#34;&#34;
+        self.repr_obj.display_score_after_turn(score)
+        self.repr_obj.display_score_after_game_over(score)
+        return True
+
+    def changeName(self, player_score_obj):
+        &#34;&#34;&#34;
+            Changes the existing player name
+        Args:
+            player_score_obj (clsobj): player score object used to change the name
+        &#34;&#34;&#34;
+        changed_player_name = input(&#39;Enter a new name: &#39;)
+        player_score_obj.change_player_name(changed_player_name, self.player_name)
+        self.player_name = changed_player_name
+
+    def check_the_key(self, key, player_score_obj):
+        &#34;&#34;&#34;[summary]
+
+        Args:
+            key ([str]): To act on specific function
+            player_score_obj ([clsobj]): Used to get the score and change the name of player
+
+        Returns:
+            [func]: Returns to specific function
+        &#34;&#34;&#34;
+        if key.lower() == &#39;q&#39; or key.lower() == &#39;r&#39;:
+            score = player_score_obj.get_player_score()
+            self.quitGame(score)
+            return &#39;break&#39;
+        elif key.lower() == &#39;c&#39;:
+            self.changeName(player_score_obj)
+            return key
+        else:
+            return key
+
+    def start_the_game(self, player_score_obj):
+        &#34;&#34;&#34;Calls computer intelligence or gameplay of player depending on the turn
+        returns when
+        - game is over
+        - user quits the game
+
+        Args:
+            player_score_obj ([clsobj]): Object of player score
+
+        Returns:
+            [type]: Return only if game is over
+        &#34;&#34;&#34;
+        int_obj = Intelligence(self.game_level)
+
+        while self.game:
+            if self.player_turn % 2 == 1:
+                print(&#39;\nComputers turn&#39;)
+                result = int_obj.computer_intelligence(player_score_obj)
+                if result == &#39;game_over&#39;:
+                    return {&#39;game_over&#39;: &#39;computer&#39;}
+                self.player_turn = self.player_turn + 1
+            elif self.player_turn % 2 == 0:
+
+                key = input(USER_MSG)
+                key_ = self.check_the_key(key, player_score_obj)
+                if key_ == &#39;break&#39;:
+                    return
+                result = self.player_obj.game_play(key_, self.player_name, player_score_obj)
+                if result == &#39;game_over&#39;:
+                    return {&#39;game_over&#39;: self.player_name}
+                self.player_turn = self.player_turn + 1
+            self.repr_obj.display_score_after_turn(player_score_obj.get_player_score())
+
+    def set_player_turn(self, game_start_key):
+        &#34;&#34;&#34;If game start key is n player turn would be 1 else 0
+
+        Args:
+            game_start_key ([str]): Y|N y - players wants to start first; n - computer starts first
+
+        Returns:
+            [int]: returns player turn 1 or 0
+        &#34;&#34;&#34;
+        if game_start_key in [&#39;n&#39;, &#39;N&#39;]:
+            self.player_turn = 1
+            print(&#39;First turns goes to Computer&#39;)
+        else:
+            self.player_turn = 2
+            print(f&#34;{self.player_name}, you&#39;re starting the game now get ready! Good luck :) &#34;)
+        return self.player_turn
+
+    def get_game_level(self):
+        &#34;&#34;&#34;To get to know which level users wants to play
+        e - easy
+        m - medium
+        h - hard
+
+        Returns:
+            [str]: The level of the game
+        &#34;&#34;&#34;
+        level_flag = False
+        while not level_flag:
+            game_level = input(LEVEL_MSG)
+            if game_level in [&#39;e&#39;, &#39;E&#39;, &#39;m&#39;, &#39;M&#39;, &#39;h&#39;, &#39;H&#39;]:
+                level_flag = True
+        return game_level
+
+    def get_game_start_key(self):
+        &#34;&#34;&#34;To get to know who is starting the game first whether the player or computer
+        player = y
+        computer = n
+
+        Returns:
+            [func]: To set the player turn
+        &#34;&#34;&#34;
+        while not self.game:
+            game_start_key = input(WELCOME_MSG)
+            if game_start_key in [&#39;n&#39;, &#39;N&#39;, &#39;y&#39;, &#39;Y&#39;]:
+                self.game = True
+        return self.set_player_turn(game_start_key)
+
+    def display(self, score, result):
+        &#34;&#34;&#34;Function that displays accordingly once game is over
+
+        Args:
+            score ([dict]): Player score
+            result ([dict]): Container the playername with gameover as key
+
+        Returns:
+            [boolean]: To end the game
+        &#34;&#34;&#34;
+        self.repr_obj.display_score_after_turn(score)
+        self.repr_obj.game_over(result[&#39;game_over&#39;])
+        self.repr_obj.display_score_after_game_over(score)
+        return True
+
+    def do_start(self, args):
+        &#39;To start the game,  Click command start&#39;
+        if args == &#39;cheat&#39;:
+            start_dice = 2
+            end_dice = 5
+        else:
+            start_dice = 1
+            end_dice = 6
+        self.player_obj = Player(start_dice, end_dice)
+        self.repr_obj = VisualRepresentaion()
+
+        self.game = False
+        self.player_name = None
+        self.player_turn = 0
+        self.game_level = None
+
+        self.player_name = self.player_obj.get_player_name()
+        player_score_obj = PlayerScore(self.player_name)
+
+        print(f&#34;Hey! {self.player_name}, Let&#39;s play pig.&#34;)
+        time.sleep(0.2)
+        self.game_level = self.get_game_level()
+        self.player_turn = self.get_game_start_key()
+        result = self.start_the_game(player_score_obj)
+        if type(result) == dict:
+            score = player_score_obj.get_player_score()
+            self.display(score, result)
+
+    def do_rules(self, args):
+        &#39;Rules of the game are here&#39;
+        print(&#39;The Basic Rules of the game are as follows: &#39;)
+        print()
+        print(&#39;A player shall roll a die until the player decides to hold&#39;)
+        print(&#39;Be careful because if you(the player) roll a 1 or a 6&#39;)
+        print(&#39;You will lose your score of that turn- meaning you will get a 0 for that turn&#39;)
+        print(&#39;If you roll any other number besides a 1 or a 6&#39;)
+        print(&#34;It will be added to your &#39;TurnScore&#39; and your turn will continue&#34;)   
+        print()
+        print(&#34;Now, To roll the dice type &#39;start&#39; or &#39;start_cheat_game&#39; to start with cheats &#34;)
+
+    def do_quit(self, args):
+        &#39;Quit the game&#39;
+        return True
+
+    def do_start_cheat_game(self, arg):
+        &#39;To play this game faster,  Type start_cheat_game&#39;
+        print(&#39;Welcome to cheat game&#39;)
+        print()
+        print(&#39;&#39;&#39;Cheat game will end quicker than the usual game because
+you will only get numbers between 2 and 5 &#39;&#39;&#39;)
+        self.do_start(&#39;cheat&#39;)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>cmd.Cmd</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="game.index.PigShell.flag"><code class="name">var <span class="ident">flag</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="game.index.PigShell.intro"><code class="name">var <span class="ident">intro</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="game.index.PigShell.prompt"><code class="name">var <span class="ident">prompt</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="game.index.PigShell.changeName"><code class="name flex">
+<span>def <span class="ident">changeName</span></span>(<span>self, player_score_obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Changes the existing player name</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>player_score_obj</code></strong> :&ensp;<code>clsobj</code></dt>
+<dd>player score object used to change the name</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def changeName(self, player_score_obj):
+    &#34;&#34;&#34;
+        Changes the existing player name
+    Args:
+        player_score_obj (clsobj): player score object used to change the name
+    &#34;&#34;&#34;
+    changed_player_name = input(&#39;Enter a new name: &#39;)
+    player_score_obj.change_player_name(changed_player_name, self.player_name)
+    self.player_name = changed_player_name</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.check_the_key"><code class="name flex">
+<span>def <span class="ident">check_the_key</span></span>(<span>self, key, player_score_obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>[summary]</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>key</code></strong> :&ensp;<code>[str]</code></dt>
+<dd>To act on specific function</dd>
+<dt><strong><code>player_score_obj</code></strong> :&ensp;<code>[clsobj]</code></dt>
+<dd>Used to get the score and change the name of player</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[func]</code></dt>
+<dd>Returns to specific function</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_the_key(self, key, player_score_obj):
+    &#34;&#34;&#34;[summary]
+
+    Args:
+        key ([str]): To act on specific function
+        player_score_obj ([clsobj]): Used to get the score and change the name of player
+
+    Returns:
+        [func]: Returns to specific function
+    &#34;&#34;&#34;
+    if key.lower() == &#39;q&#39; or key.lower() == &#39;r&#39;:
+        score = player_score_obj.get_player_score()
+        self.quitGame(score)
+        return &#39;break&#39;
+    elif key.lower() == &#39;c&#39;:
+        self.changeName(player_score_obj)
+        return key
+    else:
+        return key</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.default"><code class="name flex">
+<span>def <span class="ident">default</span></span>(<span>self, arg)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Default function which is called when does not understand the command</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def default(self, arg):
+    &#39;Default function which is called when does not understand the command&#39;
+    print(&#39;I do not understand that command. Type &#34;help&#34; for a list of commands.&#39;)</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.display"><code class="name flex">
+<span>def <span class="ident">display</span></span>(<span>self, score, result)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function that displays accordingly once game is over</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>score</code></strong> :&ensp;<code>[dict]</code></dt>
+<dd>Player score</dd>
+<dt><strong><code>result</code></strong> :&ensp;<code>[dict]</code></dt>
+<dd>Container the playername with gameover as key</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[boolean]</code></dt>
+<dd>To end the game</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display(self, score, result):
+    &#34;&#34;&#34;Function that displays accordingly once game is over
+
+    Args:
+        score ([dict]): Player score
+        result ([dict]): Container the playername with gameover as key
+
+    Returns:
+        [boolean]: To end the game
+    &#34;&#34;&#34;
+    self.repr_obj.display_score_after_turn(score)
+    self.repr_obj.game_over(result[&#39;game_over&#39;])
+    self.repr_obj.display_score_after_game_over(score)
+    return True</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.do_quit"><code class="name flex">
+<span>def <span class="ident">do_quit</span></span>(<span>self, args)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Quit the game</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def do_quit(self, args):
+    &#39;Quit the game&#39;
+    return True</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.do_rules"><code class="name flex">
+<span>def <span class="ident">do_rules</span></span>(<span>self, args)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rules of the game are here</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def do_rules(self, args):
+    &#39;Rules of the game are here&#39;
+    print(&#39;The Basic Rules of the game are as follows: &#39;)
+    print()
+    print(&#39;A player shall roll a die until the player decides to hold&#39;)
+    print(&#39;Be careful because if you(the player) roll a 1 or a 6&#39;)
+    print(&#39;You will lose your score of that turn- meaning you will get a 0 for that turn&#39;)
+    print(&#39;If you roll any other number besides a 1 or a 6&#39;)
+    print(&#34;It will be added to your &#39;TurnScore&#39; and your turn will continue&#34;)   
+    print()
+    print(&#34;Now, To roll the dice type &#39;start&#39; or &#39;start_cheat_game&#39; to start with cheats &#34;)</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.do_start"><code class="name flex">
+<span>def <span class="ident">do_start</span></span>(<span>self, args)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>To start the game,
+Click command start</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def do_start(self, args):
+    &#39;To start the game,  Click command start&#39;
+    if args == &#39;cheat&#39;:
+        start_dice = 2
+        end_dice = 5
+    else:
+        start_dice = 1
+        end_dice = 6
+    self.player_obj = Player(start_dice, end_dice)
+    self.repr_obj = VisualRepresentaion()
+
+    self.game = False
+    self.player_name = None
+    self.player_turn = 0
+    self.game_level = None
+
+    self.player_name = self.player_obj.get_player_name()
+    player_score_obj = PlayerScore(self.player_name)
+
+    print(f&#34;Hey! {self.player_name}, Let&#39;s play pig.&#34;)
+    time.sleep(0.2)
+    self.game_level = self.get_game_level()
+    self.player_turn = self.get_game_start_key()
+    result = self.start_the_game(player_score_obj)
+    if type(result) == dict:
+        score = player_score_obj.get_player_score()
+        self.display(score, result)</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.do_start_cheat_game"><code class="name flex">
+<span>def <span class="ident">do_start_cheat_game</span></span>(<span>self, arg)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>To play this game faster,
+Type start_cheat_game</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">    def do_start_cheat_game(self, arg):
+        &#39;To play this game faster,  Type start_cheat_game&#39;
+        print(&#39;Welcome to cheat game&#39;)
+        print()
+        print(&#39;&#39;&#39;Cheat game will end quicker than the usual game because
+you will only get numbers between 2 and 5 &#39;&#39;&#39;)
+        self.do_start(&#39;cheat&#39;)</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.get_game_level"><code class="name flex">
+<span>def <span class="ident">get_game_level</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>To get to know which level users wants to play
+e - easy
+m - medium
+h - hard</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[str]</code></dt>
+<dd>The level of the game</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_game_level(self):
+    &#34;&#34;&#34;To get to know which level users wants to play
+    e - easy
+    m - medium
+    h - hard
+
+    Returns:
+        [str]: The level of the game
+    &#34;&#34;&#34;
+    level_flag = False
+    while not level_flag:
+        game_level = input(LEVEL_MSG)
+        if game_level in [&#39;e&#39;, &#39;E&#39;, &#39;m&#39;, &#39;M&#39;, &#39;h&#39;, &#39;H&#39;]:
+            level_flag = True
+    return game_level</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.get_game_start_key"><code class="name flex">
+<span>def <span class="ident">get_game_start_key</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>To get to know who is starting the game first whether the player or computer
+player = y
+computer = n</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[func]</code></dt>
+<dd>To set the player turn</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_game_start_key(self):
+    &#34;&#34;&#34;To get to know who is starting the game first whether the player or computer
+    player = y
+    computer = n
+
+    Returns:
+        [func]: To set the player turn
+    &#34;&#34;&#34;
+    while not self.game:
+        game_start_key = input(WELCOME_MSG)
+        if game_start_key in [&#39;n&#39;, &#39;N&#39;, &#39;y&#39;, &#39;Y&#39;]:
+            self.game = True
+    return self.set_player_turn(game_start_key)</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.quitGame"><code class="name flex">
+<span>def <span class="ident">quitGame</span></span>(<span>self, score)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Quits from the game</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[boolean]</code></dt>
+<dd>To quit</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def quitGame(self, score):
+    &#34;&#34;&#34;Quits from the game
+
+    Returns:
+        [boolean]: To quit
+    &#34;&#34;&#34;
+    self.repr_obj.display_score_after_turn(score)
+    self.repr_obj.display_score_after_game_over(score)
+    return True</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.set_player_turn"><code class="name flex">
+<span>def <span class="ident">set_player_turn</span></span>(<span>self, game_start_key)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>If game start key is n player turn would be 1 else 0</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>game_start_key</code></strong> :&ensp;<code>[str]</code></dt>
+<dd>Y|N y - players wants to start first; n - computer starts first</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[int]</code></dt>
+<dd>returns player turn 1 or 0</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_player_turn(self, game_start_key):
+    &#34;&#34;&#34;If game start key is n player turn would be 1 else 0
+
+    Args:
+        game_start_key ([str]): Y|N y - players wants to start first; n - computer starts first
+
+    Returns:
+        [int]: returns player turn 1 or 0
+    &#34;&#34;&#34;
+    if game_start_key in [&#39;n&#39;, &#39;N&#39;]:
+        self.player_turn = 1
+        print(&#39;First turns goes to Computer&#39;)
+    else:
+        self.player_turn = 2
+        print(f&#34;{self.player_name}, you&#39;re starting the game now get ready! Good luck :) &#34;)
+    return self.player_turn</code></pre>
+</details>
+</dd>
+<dt id="game.index.PigShell.start_the_game"><code class="name flex">
+<span>def <span class="ident">start_the_game</span></span>(<span>self, player_score_obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calls computer intelligence or gameplay of player depending on the turn
+returns when
+- game is over
+- user quits the game</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>player_score_obj</code></strong> :&ensp;<code>[clsobj]</code></dt>
+<dd>Object of player score</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[type]</code></dt>
+<dd>Return only if game is over</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_the_game(self, player_score_obj):
+    &#34;&#34;&#34;Calls computer intelligence or gameplay of player depending on the turn
+    returns when
+    - game is over
+    - user quits the game
+
+    Args:
+        player_score_obj ([clsobj]): Object of player score
+
+    Returns:
+        [type]: Return only if game is over
+    &#34;&#34;&#34;
+    int_obj = Intelligence(self.game_level)
+
+    while self.game:
+        if self.player_turn % 2 == 1:
+            print(&#39;\nComputers turn&#39;)
+            result = int_obj.computer_intelligence(player_score_obj)
+            if result == &#39;game_over&#39;:
+                return {&#39;game_over&#39;: &#39;computer&#39;}
+            self.player_turn = self.player_turn + 1
+        elif self.player_turn % 2 == 0:
+
+            key = input(USER_MSG)
+            key_ = self.check_the_key(key, player_score_obj)
+            if key_ == &#39;break&#39;:
+                return
+            result = self.player_obj.game_play(key_, self.player_name, player_score_obj)
+            if result == &#39;game_over&#39;:
+                return {&#39;game_over&#39;: self.player_name}
+            self.player_turn = self.player_turn + 1
+        self.repr_obj.display_score_after_turn(player_score_obj.get_player_score())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="game" href="index.html">game</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="game.index.PigShell" href="#game.index.PigShell">PigShell</a></code></h4>
+<ul class="two-column">
+<li><code><a title="game.index.PigShell.changeName" href="#game.index.PigShell.changeName">changeName</a></code></li>
+<li><code><a title="game.index.PigShell.check_the_key" href="#game.index.PigShell.check_the_key">check_the_key</a></code></li>
+<li><code><a title="game.index.PigShell.default" href="#game.index.PigShell.default">default</a></code></li>
+<li><code><a title="game.index.PigShell.display" href="#game.index.PigShell.display">display</a></code></li>
+<li><code><a title="game.index.PigShell.do_quit" href="#game.index.PigShell.do_quit">do_quit</a></code></li>
+<li><code><a title="game.index.PigShell.do_rules" href="#game.index.PigShell.do_rules">do_rules</a></code></li>
+<li><code><a title="game.index.PigShell.do_start" href="#game.index.PigShell.do_start">do_start</a></code></li>
+<li><code><a title="game.index.PigShell.do_start_cheat_game" href="#game.index.PigShell.do_start_cheat_game">do_start_cheat_game</a></code></li>
+<li><code><a title="game.index.PigShell.flag" href="#game.index.PigShell.flag">flag</a></code></li>
+<li><code><a title="game.index.PigShell.get_game_level" href="#game.index.PigShell.get_game_level">get_game_level</a></code></li>
+<li><code><a title="game.index.PigShell.get_game_start_key" href="#game.index.PigShell.get_game_start_key">get_game_start_key</a></code></li>
+<li><code><a title="game.index.PigShell.intro" href="#game.index.PigShell.intro">intro</a></code></li>
+<li><code><a title="game.index.PigShell.prompt" href="#game.index.PigShell.prompt">prompt</a></code></li>
+<li><code><a title="game.index.PigShell.quitGame" href="#game.index.PigShell.quitGame">quitGame</a></code></li>
+<li><code><a title="game.index.PigShell.set_player_turn" href="#game.index.PigShell.set_player_turn">set_player_turn</a></code></li>
+<li><code><a title="game.index.PigShell.start_the_game" href="#game.index.PigShell.start_the_game">start_the_game</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

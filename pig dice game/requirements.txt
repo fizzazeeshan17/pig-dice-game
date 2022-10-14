@@ -1,0 +1,34 @@
+
+This file contains a list of packages that should be installed in order to run the application. 
+
+A Python IDE, Command prompt, and Pretty table are required in order to run the game.
+
+The game and tests will not work without sys.path.append(path)
+The user has to enter their game path in all the game and test classes.
+
+***Installing Pretty table is a must in order to properly run the game and display the visual representation.
+The game will not work in the terminal without this.***
+
+Command prompt (cmd) 
+-To run the game in terminal
+
+Pretty table-  pip3 install prettytable 
+-To display the high score table and the dice
+
+pip3 install coverage
+-Check coverage report
+
+pip install pdoc3
+-To generate code documentation 
+
+pip3 install graphviz
+pip3 install pydot
+pip3 install pylint
+-To generate UML diagram
+
+pip3 install pylint (linter)
+-As a default linter 
+
+Authors:
+Muhammad Muaz Khan
+Fizza Zeeshan
